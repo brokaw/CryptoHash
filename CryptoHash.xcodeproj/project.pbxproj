@@ -12,6 +12,7 @@
 		AADB87BD1FE9B2B70055CE94 /* CryptoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = AADB87AF1FE9B2B60055CE94 /* CryptoHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AADB87C71FE9B2CC0055CE94 /* Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB87C61FE9B2CC0055CE94 /* Hashes.swift */; };
 		AADB88441FE9E9B70055CE94 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AADB88731FEB01EB0055CE94 /* CryptHashStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB88721FEB01EB0055CE94 /* CryptHashStringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADB882C1FE9E7F40055CE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADB88401FE9E8530055CE94 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		AADB88721FEB01EB0055CE94 /* CryptHashStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptHashStringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AADB87BA1FE9B2B70055CE94 /* CryptoHashTests.swift */,
+				AADB88721FEB01EB0055CE94 /* CryptHashStringTests.swift */,
 				AADB87BC1FE9B2B70055CE94 /* Info.plist */,
 			);
 			path = CryptoHashTests;
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADB87BB1FE9B2B70055CE94 /* CryptoHashTests.swift in Sources */,
+				AADB88731FEB01EB0055CE94 /* CryptHashStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

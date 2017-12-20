@@ -24,17 +24,17 @@ public extension Data {
     public func SHA1Hexdigest() -> String {
         return self.SHA1Digest().hexstring()
     }
-    public func SHA256Digest() -> Data {
-        return hash(length: CC_SHA256_DIGEST_LENGTH, function: CC_SHA256)
-    }
-    public func SHA256Hexdigest() -> String {
-        return self.SHA256Digest().hexstring()
-    }
     public func SHA224Digest() -> Data {
         return hash(length: CC_SHA224_DIGEST_LENGTH, function: CC_SHA224)
     }
     public func SHA224Hexdigest() -> String {
         return self.SHA224Digest().hexstring()
+    }
+    public func SHA256Digest() -> Data {
+        return hash(length: CC_SHA256_DIGEST_LENGTH, function: CC_SHA256)
+    }
+    public func SHA256Hexdigest() -> String {
+        return self.SHA256Digest().hexstring()
     }
     public func SHA384Digest() -> Data {
         return hash(length: CC_SHA384_DIGEST_LENGTH, function: CC_SHA384)

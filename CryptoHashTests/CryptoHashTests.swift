@@ -13,6 +13,17 @@ class CryptoHashTests: XCTestCase {
         super.tearDown()
     }
     
+    func testMD5Digest() {
+        let digest = self.data.MD5Digest()
+        let expected = Data([0xb1, 0x0a, 0x8d, 0xb1, 0x64, 0xe0, 0x75, 0x41,
+                             0x05, 0xb7, 0xa9, 0x9b, 0xe7, 0x2e, 0x3f, 0xe5])
+        XCTAssertEqual(digest, expected)
+    }
+    func testMD5Hexdigest() {
+        let digest = self.data.MD5Hexdigest()
+        let expected = "b10a8db164e0754105b7a99be72e3fe5"
+        XCTAssertEqual(digest, expected)
+    }
     func testSHA1Digest() {
         let digest = self.data.SHA1Digest()
         let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
@@ -25,17 +36,19 @@ class CryptoHashTests: XCTestCase {
         let expected = "0a4d55a8d778e5022fab701977c5d840bbc486d0"
         XCTAssertEqual(digest, expected)
     }
-    func testMD5Digest() {
-        let digest = self.data.MD5Digest()
-        let expected = Data([0xb1, 0x0a, 0x8d, 0xb1, 0x64, 0xe0, 0x75, 0x41,
-                             0x05, 0xb7, 0xa9, 0x9b, 0xe7, 0x2e, 0x3f, 0xe5])
+    func testSHA224Digest() {
+        let digest = self.data.SHA224Digest()
+        let expected = Data([0xc4, 0x89, 0x0f, 0xaf, 0xfd, 0xb0, 0x10, 0x5d, 0x99, 0x1a,
+                             0x46, 0x1e, 0x66, 0x8e, 0x27, 0x66, 0x85, 0x40, 0x1b, 0x02,
+                             0xea, 0xb1, 0xef, 0x43, 0x72, 0x79, 0x50, 0x47])
         XCTAssertEqual(digest, expected)
     }
-    func testMD5Hexdigest() {
-        let digest = self.data.MD5Hexdigest()
-        let expected = "b10a8db164e0754105b7a99be72e3fe5"
+    func testSHA224Hexdigest() {
+        let digest = self.data.SHA224Hexdigest()
+        let expected = "c4890faffdb0105d991a461e668e276685401b02eab1ef4372795047"
         XCTAssertEqual(digest, expected)
     }
+
     func testSHA256Digest() {
         let digest = self.data.SHA256Digest()
         let expected = Data([0xa5, 0x91, 0xa6, 0xd4, 0x0b, 0xf4, 0x20, 0x40, 0x4a, 0x01,
@@ -48,18 +61,6 @@ class CryptoHashTests: XCTestCase {
     func testSHA256Hexdigest() {
         let digest = self.data.SHA256Hexdigest()
         let expected  = "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"
-        XCTAssertEqual(digest, expected)
-    }
-    func testSHA224Digest() {
-        let digest = self.data.SHA224Digest()
-        let expected = Data([0xc4, 0x89, 0x0f, 0xaf, 0xfd, 0xb0, 0x10, 0x5d, 0x99, 0x1a,
-                             0x46, 0x1e, 0x66, 0x8e, 0x27, 0x66, 0x85, 0x40, 0x1b, 0x02,
-                             0xea, 0xb1, 0xef, 0x43, 0x72, 0x79, 0x50, 0x47])
-        XCTAssertEqual(digest, expected)
-    }
-    func testSHA224Hexdigest() {
-        let digest = self.data.SHA224Hexdigest()
-        let expected = "c4890faffdb0105d991a461e668e276685401b02eab1ef4372795047"
         XCTAssertEqual(digest, expected)
     }
     func testSHA384Digest() {

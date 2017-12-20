@@ -3,7 +3,7 @@
 //  CryptoHash
 //
 //  Created by Steve Brokaw on 12/19/17.
-//  Copyright © 2017 techmecanique. All rights reserved.
+//  Copyright © 2017 Steve Brokaw. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -10,6 +10,8 @@
 		AADB87B61FE9B2B70055CE94 /* CryptoHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB87AC1FE9B2B60055CE94 /* CryptoHash.framework */; };
 		AADB87BB1FE9B2B70055CE94 /* CryptoHashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB87BA1FE9B2B70055CE94 /* CryptoHashTests.swift */; };
 		AADB87BD1FE9B2B70055CE94 /* CryptoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = AADB87AF1FE9B2B60055CE94 /* CryptoHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADB87C71FE9B2CC0055CE94 /* Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB87C61FE9B2CC0055CE94 /* Hashes.swift */; };
+		AADB88441FE9E9B70055CE94 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +22,13 @@
 			remoteGlobalIDString = AADB87AB1FE9B2B60055CE94;
 			remoteInfo = CryptoHash;
 		};
+		AADB88411FE9E9B00055CE94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AADB87A31FE9B2B60055CE94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADB88281FE9E7F40055CE94;
+			remoteInfo = CommonCrypto;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +38,10 @@
 		AADB87B51FE9B2B70055CE94 /* CryptoHashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoHashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADB87BA1FE9B2B70055CE94 /* CryptoHashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHashTests.swift; sourceTree = "<group>"; };
 		AADB87BC1FE9B2B70055CE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADB87C61FE9B2CC0055CE94 /* Hashes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashes.swift; sourceTree = "<group>"; };
+		AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADB882C1FE9E7F40055CE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADB88401FE9E8530055CE94 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADB88441FE9E9B70055CE94 /* CommonCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AADB88251FE9E7F40055CE94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,7 +76,9 @@
 			children = (
 				AADB87AE1FE9B2B60055CE94 /* CryptoHash */,
 				AADB87B91FE9B2B70055CE94 /* CryptoHashTests */,
+				AADB882A1FE9E7F40055CE94 /* CommonCrypto */,
 				AADB87AD1FE9B2B60055CE94 /* Products */,
+				AADB88431FE9E9B70055CE94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +87,7 @@
 			children = (
 				AADB87AC1FE9B2B60055CE94 /* CryptoHash.framework */,
 				AADB87B51FE9B2B70055CE94 /* CryptoHashTests.xctest */,
+				AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AADB87AF1FE9B2B60055CE94 /* CryptoHash.h */,
+				AADB87C61FE9B2CC0055CE94 /* Hashes.swift */,
 				AADB87B01FE9B2B60055CE94 /* Info.plist */,
 			);
 			path = CryptoHash;
@@ -86,6 +111,22 @@
 			path = CryptoHashTests;
 			sourceTree = "<group>";
 		};
+		AADB882A1FE9E7F40055CE94 /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				AADB882C1FE9E7F40055CE94 /* Info.plist */,
+				AADB88401FE9E8530055CE94 /* CommonCrypto.xcconfig */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		AADB88431FE9E9B70055CE94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +135,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADB87BD1FE9B2B70055CE94 /* CryptoHash.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB88261FE9E7F40055CE94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +160,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AADB88421FE9E9B00055CE94 /* PBXTargetDependency */,
 			);
 			name = CryptoHash;
 			productName = CryptoHash;
@@ -136,6 +185,24 @@
 			productReference = AADB87B51FE9B2B70055CE94 /* CryptoHashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AADB88281FE9E7F40055CE94 /* CommonCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADB883A1FE9E7F50055CE94 /* Build configuration list for PBXNativeTarget "CommonCrypto" */;
+			buildPhases = (
+				AADB88241FE9E7F40055CE94 /* Sources */,
+				AADB88251FE9E7F40055CE94 /* Frameworks */,
+				AADB88261FE9E7F40055CE94 /* Headers */,
+				AADB88271FE9E7F40055CE94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommonCrypto;
+			productName = CommonCrypto;
+			productReference = AADB88291FE9E7F40055CE94 /* CommonCrypto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,9 +215,14 @@
 				TargetAttributes = {
 					AADB87AB1FE9B2B60055CE94 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					AADB87B41FE9B2B70055CE94 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AADB88281FE9E7F40055CE94 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -170,6 +242,7 @@
 			targets = (
 				AADB87AB1FE9B2B60055CE94 /* CryptoHash */,
 				AADB87B41FE9B2B70055CE94 /* CryptoHashTests */,
+				AADB88281FE9E7F40055CE94 /* CommonCrypto */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +262,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AADB88271FE9E7F40055CE94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -196,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADB87C71FE9B2CC0055CE94 /* Hashes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +288,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AADB88241FE9E7F40055CE94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -214,6 +302,11 @@
 			isa = PBXTargetDependency;
 			target = AADB87AB1FE9B2B60055CE94 /* CryptoHash */;
 			targetProxy = AADB87B71FE9B2B70055CE94 /* PBXContainerItemProxy */;
+		};
+		AADB88421FE9E9B00055CE94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADB88281FE9E7F40055CE94 /* CommonCrypto */;
+			targetProxy = AADB88411FE9E9B00055CE94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -333,6 +426,7 @@
 		AADB87C11FE9B2B70055CE94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,6 +442,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmecanique.CryptoHash;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -355,6 +451,7 @@
 		AADB87C21FE9B2B70055CE94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -370,6 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmecanique.CryptoHash;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -377,6 +475,7 @@
 		AADB87C41FE9B2B70055CE94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2V7J8JS7H2;
@@ -391,6 +490,7 @@
 		AADB87C51FE9B2B70055CE94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2V7J8JS7H2;
@@ -399,6 +499,50 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmecanique.CryptoHashTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		AADB883B1FE9E7F50055CE94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AADB88401FE9E8530055CE94 /* CommonCrypto.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DJ6F4PZ2AT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.brokaw.CommonCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AADB883C1FE9E7F50055CE94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AADB88401FE9E8530055CE94 /* CommonCrypto.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DJ6F4PZ2AT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.brokaw.CommonCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -428,6 +572,15 @@
 			buildConfigurations = (
 				AADB87C41FE9B2B70055CE94 /* Debug */,
 				AADB87C51FE9B2B70055CE94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB883A1FE9E7F50055CE94 /* Build configuration list for PBXNativeTarget "CommonCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB883B1FE9E7F50055CE94 /* Debug */,
+				AADB883C1FE9E7F50055CE94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

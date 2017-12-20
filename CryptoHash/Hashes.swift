@@ -60,24 +60,43 @@ extension Data {
 
 let ENCODING = String.Encoding.utf8
 
+// TODO: No string methods are tested
 public extension String {
-    public func MD5() -> Data? {
-        return self.data(using: ENCODING)?.MD5()
+    public func MD5Digest() -> Data? {
+        return self.data(using: ENCODING)?.MD5Digest()
     }
-    public func MD5Hexstring() -> String? {
-        return self.data(using: ENCODING)?.MD5Hexstring()
+    public func MD5Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.MD5Hexdigest()
     }
-    public func SHA1() -> Data? {
-        return self.data(using: ENCODING)?.SHA1()
+    public func SHA1Digest() -> Data? {
+        return self.data(using: ENCODING)?.SHA1Digest()
     }
-    public func SHA1Hexstring() -> String? {
-        return self.data(using: ENCODING)?.SHA1Hexstring()
+    public func SHA1Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.SHA1Hexdigest()
     }
-    public func SHA256() -> Data? {
-        return self.data(using: ENCODING)?.SHA256()
+    public func SHA224Digest() -> Data? {
+        return self.data(using: ENCODING)?.SHA224Digest()
     }
-    public func SHA256Hexstring() -> String? {
-        return self.data(using: ENCODING)?.SHA256Hexstring()
+    public func SHA224Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.SHA224Hexdigest()
+    }
+    public func SHA256Digest() -> Data? {
+        return self.data(using: ENCODING)?.SHA256Digest()
+    }
+    public func SHA256Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.SHA256Hexdigest()
+    }
+    public func SHA384Digest() -> Data? {
+        return self.data(using: ENCODING)?.SHA384Digest()
+    }
+    public func SHA384Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.SHA384Hexdigest()
+    }
+    func SHA512Digest() -> Data? {
+        return self.data(using: ENCODING)?.SHA512Digest()
+    }
+    func SHA512Hexdigest() -> String? {
+        return self.data(using: ENCODING)?.SHA512Hexdigest()
     }
 }
 

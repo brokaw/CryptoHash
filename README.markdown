@@ -5,7 +5,7 @@ Basic Hash Functions in Swift.
 
 Usage:
 
-Public API is implemented as extension methods on `Data`
+Public API is implemented as extension methods on `Data` and `String`
 
 ```
 let data = ...

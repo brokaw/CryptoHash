@@ -30,13 +30,57 @@ public extension Data {
     public func SHA256Hexstring() -> String {
         return self.SHA256().hexstring()
     }
+    // TODO: Needs Test
+    public func SHA224() -> Data {
+        return hash(length: CC_SHA224_DIGEST_LENGTH, function: CC_SHA224)
+    }
+    public func SHA224Hexstring() -> String {
+        return self.SHA224().hexstring()
+    }
+    // TODO: Needs Test
+    public func SHA384() -> Data {
+        return hash(length: CC_SHA384_DIGEST_LENGTH, function: CC_SHA384)
+    }
+    public func SHA384Hexstring() -> String {
+        return self.SHA384().hexstring()
+    }
+    // TODO: Needs Test
+    public func SHA512() -> Data {
+        return hash(length: CC_SHA512_DIGEST_LENGTH, function: CC_SHA512)
+    }
+    public func SHA512Hexstring() -> String {
+        return self.SHA512().hexstring()
+    }
 }
 
 extension Data {
     func hexstring() -> String {
-        return map {
+        return self.map {
             String(format: "%02x", $0)
         }.joined()
+    }
+}
+
+let ENCODING = String.Encoding.utf8
+
+public extension String {
+    public func MD5() -> Data? {
+        return self.data(using: ENCODING)?.MD5()
+    }
+    public func MD5Hexstring() -> String? {
+        return self.data(using: ENCODING)?.MD5Hexstring()
+    }
+    public func SHA1() -> Data? {
+        return self.data(using: ENCODING)?.SHA1()
+    }
+    public func SHA1Hexstring() -> String? {
+        return self.data(using: ENCODING)?.SHA1Hexstring()
+    }
+    public func SHA256() -> Data? {
+        return self.data(using: ENCODING)?.SHA256()
+    }
+    public func SHA256Hexstring() -> String? {
+        return self.data(using: ENCODING)?.SHA256Hexstring()
     }
 }
 

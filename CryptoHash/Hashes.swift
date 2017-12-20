@@ -60,7 +60,6 @@ extension Data {
 
 let ENCODING = String.Encoding.utf8
 
-// TODO: No string methods are tested
 public extension String {
     public func MD5Digest() -> Data? {
         return self.data(using: ENCODING)?.MD5Digest()

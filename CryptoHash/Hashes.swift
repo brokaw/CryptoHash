@@ -92,10 +92,10 @@ public extension String {
     public func SHA384Hexdigest() -> String? {
         return self.data(using: ENCODING)?.SHA384Hexdigest()
     }
-    func SHA512Digest() -> Data? {
+    public func SHA512Digest() -> Data? {
         return self.data(using: ENCODING)?.SHA512Digest()
     }
-    func SHA512Hexdigest() -> String? {
+    public func SHA512Hexdigest() -> String? {
         return self.data(using: ENCODING)?.SHA512Hexdigest()
     }
 }

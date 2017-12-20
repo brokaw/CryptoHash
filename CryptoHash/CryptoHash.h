@@ -1,11 +1,3 @@
-//
-//  CryptoHash.h
-//  CryptoHash
-//
-//  Created by Steve Brokaw on 12/19/17.
-//  Copyright © 2017 Steve Brokaw. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for CryptoHash.

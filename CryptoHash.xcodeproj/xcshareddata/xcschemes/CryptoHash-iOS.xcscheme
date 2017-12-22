@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
+               BlueprintIdentifier = "AADB88851FEBD0350055CE94"
                BuildableName = "CryptoHash.framework"
-               BlueprintName = "CryptoHash"
+               BlueprintName = "CryptoHash-iOS"
                ReferencedContainer = "container:CryptoHash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AADB87B41FE9B2B70055CE94"
-               BuildableName = "CryptoHashTests.xctest"
-               BlueprintName = "CryptoHashTests"
-               ReferencedContainer = "container:CryptoHash.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
-            BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
-            ReferencedContainer = "container:CryptoHash.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
+            BlueprintIdentifier = "AADB88851FEBD0350055CE94"
             BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
+            BlueprintName = "CryptoHash-iOS"
             ReferencedContainer = "container:CryptoHash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
+            BlueprintIdentifier = "AADB88851FEBD0350055CE94"
             BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
+            BlueprintName = "CryptoHash-iOS"
             ReferencedContainer = "container:CryptoHash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

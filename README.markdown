@@ -2,9 +2,6 @@
 
 Basic Hash Functions in Swift.
 
-
-Usage:
-
 Public API is implemented as extension methods on `Data` and `String`
 
 ```
@@ -29,7 +26,6 @@ let hexdigest: String = data.SHA256Hexdigest()
 // SHA384
 let digest: Data = data.SHA384Digest()
 let hexdigest: String = data.SHA384Hexdigest()
-
 
 // SHA512
 let digest: Data = data.SHA512Digest()

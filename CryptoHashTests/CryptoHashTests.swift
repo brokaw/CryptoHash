@@ -27,10 +27,9 @@ class CryptoHashTests: XCTestCase {
     func testSHA1Digest() {
         let digest = self.data.SHA1Digest()
         let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
-                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0 ])
+                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0])
         XCTAssertEqual(digest, expected)
     }
-
     func testSHA1Hexdigest() {
         let digest = self.data.SHA1Hexdigest()
         let expected = "0a4d55a8d778e5022fab701977c5d840bbc486d0"

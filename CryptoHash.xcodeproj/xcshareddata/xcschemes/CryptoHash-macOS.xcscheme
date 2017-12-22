@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
                BuildableName = "CryptoHash.framework"
-               BlueprintName = "CryptoHash"
+               BlueprintName = "CryptoHash-macOS"
                ReferencedContainer = "container:CryptoHash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
             BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
+            BlueprintName = "CryptoHash-macOS"
             ReferencedContainer = "container:CryptoHash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -68,7 +68,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
             BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
+            BlueprintName = "CryptoHash-macOS"
             ReferencedContainer = "container:CryptoHash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AADB87AB1FE9B2B60055CE94"
             BuildableName = "CryptoHash.framework"
-            BlueprintName = "CryptoHash"
+            BlueprintName = "CryptoHash-macOS"
             ReferencedContainer = "container:CryptoHash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

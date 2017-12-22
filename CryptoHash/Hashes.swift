@@ -1,49 +1,38 @@
 import Foundation
-import CommonCrypto
 
 public extension Data {
-    typealias  CCHashFunc = (UnsafeRawPointer, CC_LONG, UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8>?
-
-    func hash(length: Int32, function: CCHashFunc) -> Data {
-        return withUnsafeBytes({ (pointer: UnsafePointer<UInt8>) -> Data in
-            var buffer = [UInt8](repeating: 0, count: Int(length))
-            let length = CC_LONG(self.count)
-            _ = function(pointer, length, &buffer)
-            return Data(bytes: buffer)
-        })
-    }
     public func MD5Digest() -> Data {
-        return hash(length: CC_MD5_DIGEST_LENGTH, function: CC_MD5)
+        return MD5(self)
     }
     public func MD5Hexdigest() -> String {
         return MD5Digest().hexstring()
     }
     public func SHA1Digest() -> Data {
-        return hash(length: CC_SHA1_DIGEST_LENGTH, function: CC_SHA1)
+        return SHA1(self)
     }
     public func SHA1Hexdigest() -> String {
         return SHA1Digest().hexstring()
     }
     public func SHA224Digest() -> Data {
-        return hash(length: CC_SHA224_DIGEST_LENGTH, function: CC_SHA224)
+        return SHA224(self)
     }
     public func SHA224Hexdigest() -> String {
         return SHA224Digest().hexstring()
     }
     public func SHA256Digest() -> Data {
-        return hash(length: CC_SHA256_DIGEST_LENGTH, function: CC_SHA256)
+        return SHA256(self)
     }
     public func SHA256Hexdigest() -> String {
         return SHA256Digest().hexstring()
     }
     public func SHA384Digest() -> Data {
-        return hash(length: CC_SHA384_DIGEST_LENGTH, function: CC_SHA384)
+        return SHA384(self)
     }
     public func SHA384Hexdigest() -> String {
         return SHA384Digest().hexstring()
     }
     public func SHA512Digest() -> Data {
-        return hash(length: CC_SHA512_DIGEST_LENGTH, function: CC_SHA512)
+        return SHA512(self)
     }
     public func SHA512Hexdigest() -> String {
         return SHA512Digest().hexstring()

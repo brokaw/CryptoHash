@@ -7,5 +7,6 @@ FOUNDATION_EXPORT double CryptoHashVersionNumber;
 FOUNDATION_EXPORT const unsigned char CryptoHashVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CryptoHash/PublicHeader.h>
+
 #import <CryptoHash/CommonCryptoBridge.h>
 

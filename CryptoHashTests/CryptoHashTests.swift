@@ -92,4 +92,92 @@ class CryptoHashTests: XCTestCase {
         let expected = "2c74fd17edafd80e8447b0d46741ee243b7eb74dd2149a0ab1b9246fb30382f27e853d8585719e0e67cbda0daa8f51671064615d645ae27acb15bfb1447f459b"
         XCTAssertEqual(digest, expected)
     }
+    func testHashObjectDoesMatchOneShotFunction() {
+        let sha1obj = SHA1Digest()
+
+        sha1obj.update("H".data(using: .utf8)!)
+        sha1obj.update("e".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update(" ".data(using: .utf8)!)
+        sha1obj.update("W".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update("r".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("d".data(using: .utf8)!)
+        let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
+                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0])
+
+        XCTAssertEqual(sha1obj.digest(), expected)
+    }
+    func testHashObjectIsReusableAfterReset() {
+        
+        let sha1obj = SHA1Digest()
+        sha1obj.update("H".data(using: .utf8)!)
+        sha1obj.update("e".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update(" ".data(using: .utf8)!)
+        sha1obj.update("W".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update("r".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("d".data(using: .utf8)!)
+        let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
+                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0])
+
+        XCTAssertEqual(sha1obj.digest(), expected)
+        sha1obj.reset()
+        sha1obj.update("H".data(using: .utf8)!)
+        sha1obj.update("e".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update(" ".data(using: .utf8)!)
+        sha1obj.update("W".data(using: .utf8)!)
+        sha1obj.update("o".data(using: .utf8)!)
+        sha1obj.update("r".data(using: .utf8)!)
+        sha1obj.update("l".data(using: .utf8)!)
+        sha1obj.update("d".data(using: .utf8)!)
+        XCTAssertEqual(sha1obj.digest(), expected)
+    }
+    func testSHA1HashUpdateFunctionDoesMatchOneShotFunction() {
+        let context = SHA1_Init()
+        SHA1_Update(context, "H".data(using: .utf8)!)
+        SHA1_Update(context, "e".data(using: .utf8)!)
+        SHA1_Update(context, "l".data(using: .utf8)!)
+        SHA1_Update(context, "l".data(using: .utf8)!)
+        SHA1_Update(context, "o".data(using: .utf8)!)
+        SHA1_Update(context, " ".data(using: .utf8)!)
+        SHA1_Update(context, "W".data(using: .utf8)!)
+        SHA1_Update(context, "o".data(using: .utf8)!)
+        SHA1_Update(context, "r".data(using: .utf8)!)
+        SHA1_Update(context, "l".data(using: .utf8)!)
+        SHA1_Update(context, "d".data(using: .utf8)!)
+        let digest = SHA1_Final(context);
+        let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
+                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0])
+        XCTAssertEqual(digest, expected)
+    }
+    func testSHA1HashValueUpdateFunctionDoesMatchOneShotFunction() {
+        var context: NSValue? = VSha1_Init()
+        VSha1_update(&context, "H".data(using: .utf8)!)
+        VSha1_update(&context, "e".data(using: .utf8)!)
+        VSha1_update(&context, "l".data(using: .utf8)!)
+        VSha1_update(&context, "l".data(using: .utf8)!)
+        VSha1_update(&context, "o".data(using: .utf8)!)
+        VSha1_update(&context, " ".data(using: .utf8)!)
+        VSha1_update(&context, "W".data(using: .utf8)!)
+        VSha1_update(&context, "o".data(using: .utf8)!)
+        VSha1_update(&context, "r".data(using: .utf8)!)
+        VSha1_update(&context, "l".data(using: .utf8)!)
+        VSha1_update(&context, "d".data(using: .utf8)!)
+        let digest = VSha1_final(context!)
+        let expected = Data([0x0a, 0x4d, 0x55, 0xa8, 0xd7, 0x78, 0xe5, 0x02, 0x2f, 0xab,
+                             0x70, 0x19, 0x77, 0xc5, 0xd8, 0x40, 0xbb, 0xc4, 0x86, 0xd0])
+        XCTAssertEqual(digest, expected)
+    }
+
 }

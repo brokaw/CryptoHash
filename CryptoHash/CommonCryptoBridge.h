@@ -9,45 +9,28 @@ NSData * SHA256(NSData * data);
 NSData * SHA384(NSData * data);
 NSData * SHA512(NSData * data);
 
-NSMutableData * SHA1_Init(void);
-void SHA1_Update(NSMutableData *, NSData *);
-NSData * SHA1_Final(NSMutableData *);
+NSValue * MD5_Init(void);
+void MD5_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * MD5_Final(NSValue * value);
 
-NSValue * VSha1_Init(void);
-void VSha1_update(NSValue **value, NSData *data);
-NSData * VSha1_final(NSValue * value);
+NSValue * SHA1_Init(void);
+void SHA1_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * SHA1_Final(NSValue * value);
 
-@protocol CryptoHashable
-- (void)update:(NSData *)data;
-- (NSData *)digest;
-- (void)reset;
-@end
+NSValue * SHA224_Init(void);
+void SHA224_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * SHA224_Final(NSValue * value);
 
-//@interface Digest: NSObject {
-//    void * _context;
-//}
-//
-//+ (void *)createContext;
-//+ (void *)hashInitFunc;
-//- (void *)hashUpdateFunc;
-//- (void *)hashFinalFunc;
-//
-//@end
+NSValue * SHA256_Init(void);
+void SHA256_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * SHA256_Final(NSValue *);
 
-@interface SHA1Digest: NSObject <CryptoHashable>
-@end
+NSValue * SHA384_Init(void);
+void SHA384_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * SHA384_Final(NSValue *);
 
-@interface SHA224Digest: NSObject <CryptoHashable>
-@end
-
-@interface SHA256Digest: NSObject <CryptoHashable>
-@end
-
-@interface SHA384Digest: NSObject <CryptoHashable>
-@end
-
-@interface SHA512Digest: NSObject <CryptoHashable>
-@end
-
+NSValue * SHA512_Init(void);
+void SHA512_Update(NSValue * _Nonnull __autoreleasing * _Nonnull value, NSData *data);
+NSData * SHA512_Final(NSValue *);
 
 NS_ASSUME_NONNULL_END

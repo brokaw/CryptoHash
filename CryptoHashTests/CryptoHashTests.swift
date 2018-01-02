@@ -7,12 +7,10 @@ class CryptoHashTests: XCTestCase {
         super.setUp()
         self.data = "Hello World".data(using: .utf8)
     }
-    
     override func tearDown() {
         self.data = nil
         super.tearDown()
     }
-    
     func testMD5Digest() {
         let digest = self.data.MD5Digest()
         let expected = Data([0xb1, 0x0a, 0x8d, 0xb1, 0x64, 0xe0, 0x75, 0x41,
@@ -47,7 +45,6 @@ class CryptoHashTests: XCTestCase {
         let expected = "c4890faffdb0105d991a461e668e276685401b02eab1ef4372795047"
         XCTAssertEqual(digest, expected)
     }
-
     func testSHA256Digest() {
         let digest = self.data.SHA256Digest()
         let expected = Data([0xa5, 0x91, 0xa6, 0xd4, 0x0b, 0xf4, 0x20, 0x40, 0x4a, 0x01,
@@ -146,6 +143,7 @@ class CryptoHashTests: XCTestCase {
         XCTAssertEqual(digest1, digest2)
     }
     func testSHA256DigestUpdateFunctionEqualsOneShotFunction() {
+
         var context = SHA256_Init()
         SHA256_Update(&context, "H".data(using: .utf8)!)
         SHA256_Update(&context, "e".data(using: .utf8)!)
